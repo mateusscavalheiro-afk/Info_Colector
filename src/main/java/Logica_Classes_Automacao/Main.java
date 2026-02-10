@@ -13,10 +13,8 @@ public class Main {
         for (int i = 1; i <= 5; i++) {
             System.out.println("\nReading process data.. - Cicle N° " + i + ".");
 
-            //1.Coleta de Dados
             double value_temp = sensor1.read_sensor("Temperature_OVEN_01");
-
-            //2/3.Tratamento de Dados e Validação
+            
             sensor1.validate_data_Sec("Temperature", value_temp, 20.0, 80.0);
 
             try {
