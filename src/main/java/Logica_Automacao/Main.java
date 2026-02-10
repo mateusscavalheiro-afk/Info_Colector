@@ -38,6 +38,7 @@ public class Main {
             }
         }
 
+        System.out.println("\n");
         System.out.println("===================");
         System.out.println("== COLLECT ENDED ==");
         System.out.println("===================");
