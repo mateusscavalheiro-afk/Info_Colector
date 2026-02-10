@@ -28,8 +28,14 @@ public class Main {
             //1.Coleta de Dados
             double value_temp = read_sensor("Temperature_OVEN_01");
 
-            //2.Tratamento de Dados
-            
+            //2/3.Tratamento de Dados e Validação
+            validate_data_Sec("Temperature", value_temp, 20.0, 80.0);
+
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                System.out.println("| ERR0R: ERROR IN TIME! |");
+            }
         }
     }
 
@@ -43,11 +49,14 @@ public class Main {
 
     //Métodos Especiais (2)
     public static void validate_data_Sec(String sensor_name, Double value_sensor, Double min, Double max) {
+        //Exibir valor formatado com duas casas decimais
+        System.out.printf("Sensor: %s | Actual Value: %.2f°C", sensor_name, value_sensor);
+
         //Lógica de Programação
         if (value_sensor >= min && value_sensor <= max) {
-            System.out.println(">> Normal Operation <<");
+            System.out.println("\n >> Normal Operation << ");
         } else {
-            System.out.println(">> Outside of Security levels <<");
+            System.out.println("\n >> Outside of Security levels << ");
         }
     }
 }
