@@ -27,19 +27,27 @@ public class Main {
 
             //1.Coleta de Dados
             double value_temp = read_sensor("Temperature_OVEN_01");
-            System.out.println(read_sensor("test"));
 
             //2.Tratamento de Dados
-
+            
         }
     }
 
-    //Métodos Especiais
-
+    //Métodos Especiais (1)
     public static double read_sensor(String tag) {
         Random rand = new Random();
         //Gerar de fato um número entre 10.0 - 100.00 para simular a variação de temperatura real do processo
         double read_value = 10 + (100 - 10) * rand.nextDouble();
         return read_value;
+    }
+
+    //Métodos Especiais (2)
+    public static void validate_data_Sec(String sensor_name, Double value_sensor, Double min, Double max) {
+        //Lógica de Programação
+        if (value_sensor >= min && value_sensor <= max) {
+            System.out.println(">> Normal Operation <<");
+        } else {
+            System.out.println(">> Outside of Security levels <<");
+        }
     }
 }
