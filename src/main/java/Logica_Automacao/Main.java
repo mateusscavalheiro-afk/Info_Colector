@@ -37,6 +37,10 @@ public class Main {
                 System.out.println("| ERR0R: ERROR IN TIME! |");
             }
         }
+
+        System.out.println("===================");
+        System.out.println("== COLLECT ENDED ==");
+        System.out.println("===================");
     }
 
     //Métodos Especiais (1)
