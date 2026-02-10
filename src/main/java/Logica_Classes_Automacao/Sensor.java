@@ -2,11 +2,14 @@ package Logica_Classes_Automacao;
 
 import java.util.Random;
 
+@SuppressWarnings("all")
+
+
 public class Sensor {
-    String sensor_name;
-    Double sensor_value;
-    Double min;
-    Double max;
+    protected String sensor_name;
+    protected Double sensor_value;
+    protected Double min;
+    protected Double max;
 
     public String getSensor_name() {
         return sensor_name;
